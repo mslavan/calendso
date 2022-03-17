@@ -12,7 +12,6 @@ export default function KhibraAutoLogin() {
 
   const login = async () => {
     if (!employerId) {
-      window.location.replace('/auth/login');
       return <></>;
     }
     const credentials = await fetch(`/api/auth/khibra-employer-credentials?employerId=${employerId}`)
