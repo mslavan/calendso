@@ -1,5 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
+const employerIdPrefix = process.env.KHIBRA_EMPLOYER_ID_PREFIX || "";
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") {
     return res.status(405).end();
@@ -12,7 +14,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   res.status(200).json({
-    email: `khibra_employer_${employerId}@getkhibra.com`,
+    email: `khibra_employer_${employerIdPrefix}${employerId}@getkhibra.com`,
     password: process.env.KHIBRA_EMPLOYER_PASSWORD || "123456",
   });
 }
