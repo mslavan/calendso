@@ -213,7 +213,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
       <div className="py-6 lg:pb-8">
         <div className="flex flex-col lg:flex-row">
           <div className="flex-grow space-y-6">
-            <div className="block rtl:space-x-reverse sm:flex sm:space-x-2">
+            {/*<div className="block rtl:space-x-reverse sm:flex sm:space-x-2">
               <div className="mb-6 w-full sm:w-1/2">
                 <TextField
                   name="username"
@@ -317,7 +317,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
                 </div>
               </div>
               <hr className="mt-6" />
-            </div>
+            </div>*/}
             <div>
               <label htmlFor="language" className="block text-sm font-medium text-gray-700">
                 {t("language")}
@@ -347,7 +347,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
                 />
               </div>
             </div>
-            <div>
+            {/*<div>
               <label htmlFor="weekStart" className="block text-sm font-medium text-gray-700">
                 {t("first_day_of_week")}
               </label>
@@ -446,7 +446,7 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
                   </ConfirmationDialogContent>
                 </Dialog>
               </div>
-            </div>
+            </div>*/}
           </div>
         </div>
         <hr className="mt-8" />
@@ -463,7 +463,7 @@ export default function Settings(props: Props) {
   const query = trpc.useQuery(["viewer.i18n"]);
 
   return (
-    <Shell heading={t("profile")} subtitle={t("edit_profile_info_description")}>
+    <Shell>
       <SettingsShell>
         <QueryCell
           query={query}

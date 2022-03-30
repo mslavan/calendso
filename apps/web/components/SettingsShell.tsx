@@ -33,9 +33,9 @@ export default function SettingsShell({ children }: { children: React.ReactNode 
 
   return (
     <>
-      <div className="sm:mx-auto">
+      {/*<div className="sm:mx-auto">
         <NavTabs tabs={tabs} />
-      </div>
+      </div>*/}
       <main className="max-w-4xl">{children}</main>
     </>
   );
