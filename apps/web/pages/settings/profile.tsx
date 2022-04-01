@@ -179,30 +179,30 @@ function SettingsView(props: ComponentProps<typeof Settings> & { localeProp: str
   async function updateProfileHandler(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    const enteredUsername = usernameRef.current.value.toLowerCase();
+/*    const enteredUsername = usernameRef.current.value.toLowerCase();
     const enteredName = nameRef.current.value;
     const enteredEmail = emailRef.current.value;
     const enteredDescription = descriptionRef.current.value;
     const enteredAvatar = avatarRef.current.value;
-    const enteredBrandColor = brandColor;
+    const enteredBrandColor = brandColor;*/
     const enteredTimeZone = typeof selectedTimeZone === "string" ? selectedTimeZone : selectedTimeZone.value;
-    const enteredWeekStartDay = selectedWeekStartDay.value;
-    const enteredHideBranding = hideBrandingRef.current.checked;
+/*    const enteredWeekStartDay = selectedWeekStartDay.value;
+    const enteredHideBranding = hideBrandingRef.current.checked;*/
     const enteredLanguage = selectedLanguage.value;
 
     // TODO: Add validation
 
     mutation.mutate({
-      username: enteredUsername,
+/*      username: enteredUsername,
       name: enteredName,
       email: enteredEmail,
       bio: enteredDescription,
-      avatar: enteredAvatar,
+      avatar: enteredAvatar,*/
       timeZone: enteredTimeZone,
-      weekStart: asStringOrUndefined(enteredWeekStartDay),
+/*      weekStart: asStringOrUndefined(enteredWeekStartDay),
       hideBranding: enteredHideBranding,
       theme: asStringOrNull(selectedTheme?.value),
-      brandColor: enteredBrandColor,
+      brandColor: enteredBrandColor,*/
       locale: enteredLanguage,
     });
   }
