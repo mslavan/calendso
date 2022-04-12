@@ -45,7 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     data: {
       userId: user.id,
       users: { connect: { id: user.id } },
-      title: "Default title",
+      title: "Job interview",
       slug: "default-book",
       length: 60,
       disableGuests: true,
